@@ -1,0 +1,39 @@
+<!--miniprogram/pages/uploading/uploading.wxml-->
+<van-nav-bar
+  title="我的相册"
+  left-text="返回"
+  left-arrow
+   fixed
+  placeholder
+  bind:click-left="onClickLeft"
+/>
+
+<view  class="con">
+ <view   class="con-left">
+ <button bindtap="selectImg" ><image src="../../images/accessories-image-viewer.png"></image> </button>
+ <!-- <van-uploader bindtap="selectImg"/> -->
+ </view>
+ <view class="con-right">
+   <image class="image" src="{{imgPath}}" mode='scaleToFill' bindtap="previewImg"></image>
+  <!-- <image src="../../images/fx.png"></image> -->
+</view>
+</view>
+<button bindtap="loadImg"   class="butt">上传图片</button>
+
+
+<!-- 上传视频 -->
+<view  class="con">
+
+      <block wx:if="{{src === ''}}">
+        <view class="image-plus image-plus-nb" bindtap="chooseVideo">
+          <view class="image-plus-horizontal  "> saas添加视频  </view>
+      
+        </view>
+   
+      </block>
+      <block wx:if="{{src != ''}}">
+        <video src="{{src}}" class="video"></video>
+      </block>
+ 
+</view>
+<button bindtap="loadImg"   class="butt">上传视频</button>

@@ -1,0 +1,146 @@
+/* login.wxss */
+.sa-img{
+  width: 100%;
+  height:200px;
+  background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3640309993,572841508&fm=26&gp=0.jpg);
+    text-align: center;
+    background-size:cover;
+}
+.sa-text{
+  color: white;
+  font-size: 25px;
+  line-height: 35px;
+    padding-top: 50px;
+}
+.container{
+  /* border: 3px solid  	#E6E6FA; */
+  /* margin: 5px 6px; */
+  /* height:0px; */
+  width: 100%;
+  /* background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597157635689&di=e47b9adf31bc2ebd5946f6d5515704de&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F52a02e668907f.jpg%3Fdown); */
+  background-size:auto  670px;
+}
+
+.con-top{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.con-bu{
+  /* padding-top: 20px; */
+  padding-bottom: 20px;
+  /* font-size: 25px; */
+
+}
+
+
+.con-but{
+  width: 80%;
+
+}
+.con-but button{
+  /* width: 60%; */
+  width: 100%;
+  height: 45px;
+  background-color: #cc163a;
+  color: #E6E6FA;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+page {
+	width: 100%;
+	height: 100%;
+	font-family: Source Han Sans CN;
+}
+
+.login {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 62rpx;
+	margin-top: 40px;
+	/* background-color: blueviolet; */
+}
+form{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.title {
+	line-height: 280rpx;
+	width: 100%;
+	font-size: 60rpx;
+	font-style: normal;
+	font-weight: bold;
+	color: #D02129;
+	text-align: center;
+}
+
+.input-box {
+	width: 100%;
+	height: 80rpx;
+	padding: 10rpx;
+	border: 2rpx solid #D02129;
+	box-sizing: border-box;
+	margin-bottom: 40rpx;
+}
+
+.error {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 120rpx;
+	padding-left: 20rpx;
+	box-sizing: border-box;
+	margin-bottom: 40rpx;
+	color: #D02129;
+	background: rgba(208, 33, 41, 0.1);
+}
+
+.login-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100rpx;
+	color: #FFFFFF;
+	background: #D02129;
+}
+.register{
+margin-top: 10px;
+ font-size: 15px;
+color: #2f90b9;
+}

@@ -1,0 +1,47 @@
+/* miniprogram/pages/basicinformation/basicinformation.wxss */
+.stratum{
+ width: 100%;
+ /* padding-bottom: 50px; */
+ height: 70px;
+
+}
+.con{
+  width: 95%;
+  /* padding: 5px; */
+  margin-top: 0px;
+  margin: 10px;
+  border-left: 1px solid #C0C0C0;
+  border-right: 1px solid #C0C0C0;
+}
+.con-button{
+  width: 100%;
+  height: 50px;
+   /* background-color: blueviolet; */
+   padding: 20rpx 0;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+ 
+}
+.con-button    button{
+  width: 90%;
+  font-size: 20px;
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.updatkf{
+  background-color: red;
+ width: 100%;
+ height: 60px;
+ padding-top: 20px;
+  /* height: 100px; */
+  text-align: center;
+}
+.updatkf text{
+  /* padding-top: 80px; */
+  width: 100%;
+  
+   /* line-height: 45px; */
+  background-color:gold ;
+
+}

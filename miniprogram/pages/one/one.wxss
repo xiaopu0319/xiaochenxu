@@ -1,0 +1,77 @@
+/* miniprogram/pages/one/one.wxss */
+.barcolor{
+background-color: #681752;
+ 
+}
+#tubiao{
+  /* background-color: #eb3c70; */
+  color: #eb3c70;
+}
+.container{
+  width: 100%;
+  /* height: 900px; */
+  padding: 0px;
+  /* background-color: orange; */
+}
+.page-img{
+  margin: 0px;
+    background-color: palegoldenrod;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
+
+.swiper1  image{
+  width: 100%;
+  /* height: 250rpx; */
+}
+
+.page-text{
+text-align: center;
+margin-top: 10px;
+ font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+#tjcolor{
+  color:#92b3a5;
+}
+.page-son{
+ width: 95%;
+  /* background-color: palegreen; */
+}
+.page-son-z{
+
+  padding-top: 10px;
+}
+.page-son-z image{
+  width: 100%;
+ height: 400px;
+border-radius: 12px;
+
+} 
+.page-son-text{
+display: flex;
+justify-content: space-between;
+ padding:10px;
+
+}
+.page-son-text text{
+  font-size: 20px;
+  font-weight:600px;
+}
+.page-son-text  p{
+  color: 		#A9A9A9;
+  font-size: 15px;
+
+}
+
+.page-son-text-z{
+
+  padding:8px;
+}
+.page-son-text-z  text{
+  color: 		#A9A9A9;
+  font-size: 15px;
+}

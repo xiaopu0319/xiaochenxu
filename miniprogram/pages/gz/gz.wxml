@@ -1,0 +1,89 @@
+<!--miniprogram/pages/gz/gz.wxml-->
+<van-nav-bar
+  title="关注列表"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+    fixed
+  placeholder
+/>
+  
+
+<view  class="con">
+
+<van-tabs swipeable active="b">
+
+  <van-tab title="关注" name="a">
+  <van-search 
+  value="{{ value }}"
+     background="#132c33"
+     color="#ed556a"
+   placeholder="请输入搜索关键词"
+   show-action 
+     bind:search="onSearch"
+   
+  bind:cancel="onCancel"
+  
+   />
+
+
+<!-- <block  wx:for= "{{ gzUser }}"  wx:key='*this' wx:for-index="index"  wx:for-item="item" > -->
+<!-- {{gzUser}} -->
+<block wx:for="{{ gzUSERs}}" wx:key ='*this'  wx:for-item="item"  >
+  <view   class="content"    >
+  <!-- 头像 -->
+   <view class="content-l">
+     <image  src="{{imgurl+item.userImg}}"></image>
+
+   </view>
+   <!-- 文本 -->
+  <view class="content-c">
+   <text id="c-tiltle-f">{{item.userName}} \n</text>
+   <text id="c-text-f">{{ item.userSign}}</text>
+    
+  </view>
+  <!-- 关注 -->
+  <view class="content-r">
+  <!-- data-index='{{index}}' 循环 -->
+   <!-- wx:if="{{GZstateid=='2'}}"  -->
+   <view  bindtap="gzbind"   data-index='{{index}}'   wx-if="{{item.strt==2}}" style="background:#2486b9" >已关注</view>
+    <view  bindtap="gzbind"   data-index='{{index}}' wx:if="{{item.strt!=2}}"  style="background:#ba2f7b">关注</view>
+  </view>
+  
+<!-- content -->
+  </view>
+  </block>
+  </van-tab>
+
+
+
+
+
+  <van-tab title="粉丝" name="b">
+<block wx:for="{{ userfs}}" wx:key ='*this'  wx:for-item="item"  >
+    <view   class="content"  >
+   <view class="content-l"   bindtap="gzindex"  id="{{item.userName}}"  >
+ <image  src="{{imgurl+item.userImg}}"></image>
+   </view>
+  <view class="content-c">
+   <text id="c-tiltle-f">{{item.userName}}\n</text>
+   <text id="c-text-f"> {{item.userSign }}</text>
+  </view>
+  <view class="content-r">                                                           
+                                <!--  //eba0b3 -->
+      <view  bindtap="fsbind"   data-index='{{index}}'   wx:if="{{item.strt==2}}" style="background:#eba0b3" >回关</view>
+    <view  bindtap="fsbind"   data-index='{{index}}' wx:if="{{item.strt==3}}"  style="background:#2486b9">互相关注</view>
+  </view>
+
+  
+<!-- content -->
+  </view>
+  
+    </block>
+</van-tab>
+
+</van-tabs>
+   <!-- con -->
+    </view>
+

@@ -1,0 +1,374 @@
+<!--index.wxml-->
+
+
+<van-nav-bar
+  title="随爱"
+  left-text="返回"
+  left-arrow
+    fixed
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+
+
+
+<view class="container">
+
+<view class="page-body  page-img">
+      <swiper  class="swiper1" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" 
+        duration="{{duration}}"
+
+      current="{{swiperCurrent}}"   bindchange="swiperChange" 
+        >
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+          <image  class="images"  mode="widthFix"  src="{{imgurl+item}}"></image>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+
+<!-- 指示点 -->
+<view class="dots">
+     <block wx:for="{{page}}" wx:key>
+          <view class="{{index==swiperCurrent?'active':'dot'}}" bindtap="chuangEvent" id="{{index}}">
+          <image     class="images-dots" mode="aspectFit	"   src="{{imgurl+background[index]}}" ></image>
+          </view>
+     </block>
+</view>
+
+</view>
+
+
+
+ <view    class="con-text" >
+  <view id="con-text-t">{{user[0].userName}}</view> 
+  <!-- <view  id="con-text-b">\n</view> -->
+    <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ {{user[0].userAge}}</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔{{user[0].work}} </van-tag> 
+  </view>
+
+
+  <view  class="con-B"> 
+<van-tabs swipeable  active="b">
+
+  <van-tab title="关于她" name="a"   class="van-ta" >
+
+   <view class="con-van-t">
+    <view class="con-van-t-gq">个性签名\n</view>
+    {{user[0].userSign}}
+  </view>
+
+    <view class="con-van-t">
+      <view class="con-van-t-gq">个人信息\n</view>
+<!-- 信息 -->
+      <van-cell-group>
+  <van-field
+    value="{{user[0].height}}"
+       readonly
+        label="身高"
+    label-class="labele"
+    input-class="inputt"
+    left-icon='icon iconfont  icon-shengao2'
+  />
+
+  <van-field
+    value="{{user[0].weight}}"
+    type="text"
+    readonly
+    label="体重"
+      label-class="labele"
+    input-class="inputt"
+    left-icon='icon iconfont icon-icon33'
+  />
+    <van-field
+    value="{{user[0].userPhone}}"
+    type="text"
+    readonly
+    label="电话"
+   label-class="labele"
+    input-class="inputt"
+    left-icon='icon iconfont  icon-dianhua3'
+  />
+    <van-field
+    value="{{user[0].character}}"
+    type="text"
+    readonly
+    label="性格"
+      label-class="labele"
+    input-class="inputt"
+    left-icon='icon iconfont  icon-MBTIxinggeceshi'
+  
+  />
+</van-cell-group>
+     
+  </view>
+<!-- 标签-->
+ <!-- <view class="con-van-t">
+     <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ 18</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔学生 </van-tag> 
+  </view> -->
+
+  <!-- 最近在玩 -->
+   <view class="con-van-b">
+
+      <view class="con-van-t-gq">最近在玩\n</view>
+      
+      <view  class="con-youxi">
+       <view class="con-youxi-l"> 
+       <image mode="scaleToFill" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3107044355,3760343771&fm=26&gp=0.jpg"></image>
+        </view>  
+       <view class="con-youxi-c">
+       <text>王者荣耀\n</text>
+        王者绝非偶然,实力成就辉煌
+       </view>  
+       <view class="con-youxi-r">
+       <van-icon name="icon iconfont icon-wzry" />
+       </view>  
+      </view>
+ 
+
+    <view  class="con-youxi">
+       <view class="con-youxi-l"> 
+       <image mode="scaleToFill" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3107044355,3760343771&fm=26&gp=0.jpg"></image>
+        </view>  
+       <view class="con-youxi-c">
+       <text>王者荣耀\n</text>
+        王者绝非偶然,实力成就辉煌
+       </view>  
+       <view class="con-youxi-r">
+       <van-icon name="icon iconfont icon-wzry" />
+       </view>  
+      </view>
+
+  </view>
+
+
+  
+  </van-tab>
+
+
+  <van-tab title="动态" name="b">
+ 
+ <block  wx:for="{{Dynamic}}"   wx-for-item="item"    wx:key="item"   wx:for-index="index"  >
+    <view  class="con-van-b"  wx-if="{{Dynamic[index].imgvideo==1}}"  >
+  <!-- 标题头像 -->
+    <view  class="van-title-t"   >
+     <view class="van-t-img">
+     <!-- 头像 -->
+   <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="{{imgurl+user[0].userImg}}"
+   />
+     </view>
+     <view  class="van-c-text"  >
+     <!-- 名字 -->
+       <text>{{user[0].userName}}\n</text>
+        <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ {{user[0].userAge}}</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔{{user[0].work}} </van-tag> 
+     </view>
+      <view class="van-b-tubiao"><van-icon name="icon iconfont icon-sangedian" /> </view>
+    </view>
+<!-- 中间内容或图片 -->
+    <view class="van-text-c"   > 
+    <view class="van-text-c-text" >{{Dynamic[index].dynamicText}}  </view>
+
+     <view  class="van-text-c-img"    >
+     <view   >
+     <block  wx:for="{{Dynamicimg[index]}}"   wx:for-item="itemimg"   wx:key="*this"  wx:for-index="idx"   >
+      <image  mode="aspectFit" src="{{imgurl+itemimg.imgName}}"> </image>
+        </block>
+        </view>
+     </view> 
+ 
+
+     </view>
+     
+     <view class="van-dianzan-b">
+     <view class="dianzan-l"   bindtap="dz"> <van-icon name="icon iconfont icon-zan1" />  点赞</view>
+     <view  class="dianzan-c"   bindtap="pl"> <van-icon name="icon iconfont icon-comment-copy" />  评论</view>
+     <view class="dianzan-r"   bindtap="zf"> <van-icon name="icon iconfont icon-zhuanfa" />  转发</view>
+     </view>
+<!-- 空白 -->
+<!-- <view class="preempt">  </view> -->
+
+<!-- 动态对象循环 -->
+
+    </view>
+
+
+     <view  class="con-van-b"  wx-if="{{Dynamic[index].imgvideo==2}}"  >
+  <!-- 标题头像 -->
+    <view  class="van-title-t"   >
+     <view class="van-t-img">
+     <!-- 头像 -->
+   <van-image
+  round
+  width="3rem"
+  height="3rem"
+  src="{{imgurl+user[0].userImg}}"
+   />
+     </view>
+     <view  class="van-c-text"  >
+     <!-- 名字 -->
+       <text>{{user[0].userName}}\n</text>
+        <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ {{user[0].userAge}}</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔{{user[0].work}} </van-tag> 
+     </view>
+      <view class="van-b-tubiao"><van-icon name="icon iconfont icon-sangedian" /> </view>
+    </view>
+<!-- 中间内容或图片 -->
+    <view class="van-text-c"   > 
+    <view class="van-text-c-text" >{{Dynamic[index].dynamicText}}  </view>
+
+     <view  class="van-text-c-img"    >
+     </view> 
+    
+      <block  wx:for="{{video}}"   wx:for-item="itemvideo"   wx:key="*this"  wx:for-index="ix"   >
+       <video id="myVideo" src="  {{imgurl+itemvideo[ix].videoName}}"  ></video>
+   </block>
+     </view>
+     
+     <view class="van-dianzan-b">
+     <view class="dianzan-l"   bindtap="dz"> <van-icon name="icon iconfont icon-zan1" />  点赞</view>
+     <view  class="dianzan-c"   bindtap="pl"> <van-icon name="icon iconfont icon-comment-copy" />  评论</view>
+     <view class="dianzan-r"   bindtap="zf"> <van-icon name="icon iconfont icon-zhuanfa" />  转发</view>
+     </view>
+<!-- 空白 -->
+<!-- <view class="preempt">  </view> -->
+
+<!-- 动态对象循环 -->
+
+    </view>
+</block>
+
+ 
+
+
+ 
+
+
+
+<!-- 空白 -->
+<!-- <view class="preempt"></view> -->
+
+ 
+
+
+
+
+
+
+
+
+
+  
+  </van-tab>
+ 
+</van-tabs>
+
+</view>
+
+ <!-- <view    class="con-text" >
+  <view id="con-text-t">si  xuan</view> 
+  <view  id="con-text-b">在线找时间\n</view>
+    <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ 18</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔学生 </van-tag> 
+  </view>
+ <view    class="con-text" >
+  <view id="con-text-t">si  xuan</view> 
+  <view  id="con-text-b">在线找时间\n</view>
+    <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ 18</van-tag>   
+   <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔学生 </van-tag> 
+  </view>
+ -->
+
+
+
+
+
+
+  <view class="con-butt">
+
+
+   <button   style=" width: {{widthHello}}%"  bindtap="hello">打招呼</button>
+
+<button  wx:if="{{gzshow}}" bindtap="attention">关注</button>
+
+  </view>
+<!-- 弹出框 -->
+<!-- <van-cell title="展示弹出层" is-link bind:click="showPopup" /> -->
+
+<van-popup show="{{ show }}" bind:close="onClose"
+  round
+ 
+>  <view  class="gz">关注成功!</view> </van-popup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view   class="picture">
+
+<van-image 
+width="100%" 
+height="80%" 
+src="https://img.onvshen.com:85/gallery/26740/31920/s/002.jpg" />
+<view  class="personaldetails">
+ <span>小尤奈</span>  
+     <van-tag  round    type="warning"     color="#87CEFA"  text-color="	#4682B4"  size="medium"  class="bq-left" ><van-icon name="passed" />真实头像 </van-tag> 
+ </view>
+ <view  class="personaldetails">
+ <van-tag  type="danger" color="#FFB6C1"  size="medium"  >♀ 18</van-tag>   
+ <van-tag  type="danger" color="#FF00FF"  size="medium" class="bq-left" >摩羯座</van-tag>
+ <van-tag  type="danger" color="#FF7F50"  size="medium"  class="bq-left" > VIP </van-tag> 
+    <van-tag  type="danger" color="	#87CEFA	"  size="medium"  class="bq-left" > ♔学生 </van-tag> 
+ </view>
+ <view  class="personaldetails">
+  <p>小尤奈，今天穿的是鸡K哦</p>
+ </view> -->
+<!-- gutter="{{ 20 }}" -->
+
+<!-- <van-grid column-num="5"   class="Iconbutton"   icon-size="30px"	 >
+
+   <van-grid-item icon="fire"  icon-class="aa"  icon-color="red"  bind:click="refurbish" />
+  <van-grid-item icon="close"    icon-color="#A9A9A9" /> 
+  <van-grid-item icon="refund-o"  icon-color="#B22222"/>
+  <van-grid-item icon="like"   icon-color="red" />
+    <van-grid-item icon="star"   icon-color="#1E90FF" />
+
+</van-grid> -->
+
+
+<!-- <van-tabbar active="{{ active }}" bind:change="onjump">
+  <van-tabbar-item wx:for="{{ list }}" wx:key="index" icon="{{ item.icon }}">
+  {{
+    item.text
+  }}</van-tabbar-item>
+</van-tabbar> -->
+
+
+ <!-- <van-tabbar active="{{ active }}" 
+ bind:change="onChange"
+ >
+  <van-tabbar-item icon="like-o">寻爱</van-tabbar-item>
+  <van-tabbar-item icon="chat-o">消息</van-tabbar-item>
+  <van-tabbar-item icon="search">发现</van-tabbar-item>
+  <van-tabbar-item icon="manager-o">我</van-tabbar-item>
+</van-tabbar> -->

@@ -1,0 +1,56 @@
+
+<van-nav-bar
+  title="头像"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+    fixed
+  placeholder
+/>
+
+<view  class="con">  
+  <!-- class="con-img"   -->
+ <view  wx:for="{{background}}"    class=' {{activeItem ==index ? "active" :"con-img"}}'   wx:for-item="item"      wx:key="item"   wx-for-index="index"  >
+ <van-image
+  width="5rem"
+  height="5rem"
+  id="{{index}}"
+   bindtap="headPortrait"
+  src="{{item}}"
+  data-src="{{item}}"
+/>
+<!-- data-src="{{imgurl+item}}" -->
+ </view>
+ <view class="con-img">
+  <van-image
+  width="5rem"
+  height="5rem"
+  bindtap="addVideo"
+   mode="aspectFit" 
+  src=" https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598870906347&di=63b39996a6fdc9ce37d9d22a2a9b2b54&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F01%2F93%2F22%2F5982fd3b7dcbe_610.jpg"
+/>
+
+ </view>
+
+</view>
+ 
+  <view class="sctx">
+   <button   bindtap="sctx">选择为头像</button>
+  </view>
+   
+
+
+
+<!-- 弹出层   等待管理员审核 -->
+<van-dialog
+  use-slot
+  title="标题"
+  show="{{ tcshow }}"
+  show-cancel-button
+bind:confirm="notarize"
+bind:cancel="cancel"
+
+>
+<view  class="tc-text">等待管理员审核后，才可显示</view>
+
+</van-dialog>

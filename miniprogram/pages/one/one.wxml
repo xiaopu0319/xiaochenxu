@@ -1,0 +1,70 @@
+<!--miniprogram/pages/one/one.wxml-->
+<van-nav-bar
+  title="随爱"
+
+  
+   fixed
+  placeholder
+ 
+  
+/>
+<!-- 底部选项卡 -->
+<!-- <van-tabbar active="{{ active }}" bind:change="onjump">
+  <van-tabbar-item wx:for="{{ list }}" wx:key="index" icon="{{ item.icon }}">
+  {{
+    item.text
+  }}</van-tabbar-item>
+</van-tabbar> -->
+
+
+
+<view class="container">
+  <view class="page-body  page-img">
+      <swiper  class="swiper1" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+          <image  src="{{item}}"></image>
+            <!-- <view class="swiper-item {{item}}"></view> -->
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+
+ <view  class="page-text"> 
+  <van-icon id="tubiao" name="icon iconfont  icon-xingxing2" /> <text  id="tjcolor"> 今日推荐  </text>   <van-icon id="tubiao" name="icon iconfont  icon-xingxing2" /> 
+  <rich-text>只希望和你，在太阳下手牵手散步</rich-text>
+   
+</view>
+
+
+<view  class="page-son">
+
+
+ <view class="section section_gap   page-son-z" wx:for="{{array}}" wx:for-item="item"  bindtap="aabb"  id="{{item.userName}}"   wx:key="*this" >
+ <!-- https://7869-xiaopu-kxzgf-1302800822.tcb.qcloud.la/  https://img.onvshen.com:85/gallery/26740/33247/s/018.jpg{{imgurl+item.userImg}} -->
+    <image  mode="scaleToFill" src="{{imgurl+item.userImg}}" ></image>
+  <!-- https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg -->
+       <view class="page-son-text">
+       <text> {{item.userName}}</text>
+        <p > {{item.work}} </p>
+       </view>  
+  
+          <view class="page-son-text-z">
+       <text> {{item.userAge}}岁   |    {{item.height}}cm  |   {{item.character}}  |  {{item.hobby}} </text>
+       <!-- <text>{{imgurl+item.userImg}}</text> -->
+       </view>  
+
+
+
+ </view>
+</view>
+
+
+
+
+
+
+</view>
+

@@ -1,0 +1,21 @@
+
+<!-- <van-nav-bar
+  title="随爱"
+bind:click-left="leftgo"
+ open-type='exit'
+  left-arrow
+    fixed
+  placeholder<van-icon name="arrow-left" />
+
+/> -->
+<van-nav-bar title="随爱" >
+ <navigator   hover-class="navigator-hover" target="miniProgram" open-type='exit'  slot="left">  <van-icon name="arrow-left" /></navigator>
+</van-nav-bar>
+<!-- <navigator open-type=“exit” target=“miniProgram”>关闭按钮</navigator>   “exit”-->
+
+<view   class="container">
+
+  <button  bindtap="taologinDQ" >   开始结缘</button>
+
+ 
+</view>

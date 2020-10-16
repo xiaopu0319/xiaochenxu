@@ -1,0 +1,345 @@
+/**index.wxss**/
+
+/* .picture{
+  width: 95%;
+ height:500px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+ background-color: cadetblue;
+}
+.personaldetails{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+.personaldetails  span{
+  color: #DC143C;
+  font-size: 20px;
+  font-weight:900;
+  /* 加粗 */
+/* } */
+/* .personaldetails  p{
+  font-size: 15px;
+}
+
+.personaldetails .bq-left{
+  margin-left: 10px;
+}
+.Iconbutton{
+ margin-top: 25px;
+ width: 100%;
+ background-color: orange;
+}
+ .aa{
+
+background-color: orange;
+border-radius: 50%; */
+/* } */ 
+.container{
+  width: 100%;
+  /* height: 900px; */
+  padding: 0px;
+  margin-top: 50px;
+  /* background-color: orange; */
+}
+.page-img{
+  margin: 0px;
+    background-color: palegoldenrod;
+  width: 100%;
+  height: 700rpx;
+  padding: 0px;
+  /* text-align: center; */
+}
+.images{
+  width: 100%;
+  height: 100%;
+}
+.con-text{
+  margin-top: 10px;
+  padding: 10px;
+  /* background-color: blueviolet; */
+ margin-left: 10px;
+}
+
+#con-text-t{
+  font-size: 21px;
+ padding-bottom: 10px;
+
+}
+#con-text-b{
+  font-size: 15px;
+  padding-bottom: 10px;
+  /* line-height: 25px; */
+}
+.swiper1 {
+  width: 100%;
+  height: 100%;
+  /* height: 360rpx; */
+}
+
+/* 指示点自定义 */
+.images-dots{
+  width:90rpx;
+  height: 90rpx;
+  border-radius: 8rpx;
+}
+
+.dots{
+  width:90%;
+  height: 90rpx;
+  display: flex;
+  /* flex-direction: row; */
+  margin-top: -60px;
+  /* padding-left: 5%; */
+  z-index: 99;
+  /* background-color: brown; */
+}
+.dot{
+  width:90rpx;
+  height: 90rpx;
+  margin-left: 10px;
+  border-radius: 14rpx;
+   /* background-color: blueviolet; */
+  /* margin-left: 90rpx; */
+  background-color: rgb(252, 248, 248);
+}
+.dotsvideo{
+  margin-left: 10px;
+}
+.active{
+  border:  1px solid  red;
+  width:90rpx;
+  height: 90rpx;
+  margin-left: 10px;
+  border-radius: 15rpx;
+  /* margin-left: 90rpx; */
+  background-color: rgba(253, 82, 82, 0.966);
+}
+
+/* 下层最大div */
+.con-B{
+width: 100%;
+  /* height: 900px; */
+  /* background-color: 	#FFF5EE; */
+}
+/* 底部切换标签页 */
+/* a模块 */
+.con-van-t{
+/* background-color: royalblue; */
+ padding:10px;
+ width: 90%;
+ margin-left: 3%;
+ font-size: 15px;
+}
+/* 大写标题栏  个性签名 */
+.con-van-t-gq{
+  /* line-height: px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+ font-size: 20px;
+
+}
+/* 最近游戏 */
+.con-van-b{
+  padding:10px;
+  width: 100%;
+  height: 500px;
+  font-size: 15px;
+  /* background-color: rebeccapurple; */
+}
+/* 游戏 */
+.con-youxi{
+  width: 95%;
+  height: 100px;
+  padding-top:15px;
+  padding-bottom:15px;
+  /* background-color: seagreen; */
+  border-radius: 8px;
+  display: flex;
+}
+.con-youxi-l{
+width: 30%;
+
+/* background-color: tan; */
+}
+.con-youxi-l image{
+  width: 100%;
+  height: 90px;
+}
+.con-youxi-c{
+  width: 60%;
+  padding: 14px;
+  font-size: 13px;
+  /* background-color: red; */
+}
+.con-youxi-c text{
+  font-size: 18px;
+}
+.con-youxi-r{
+  width: 10%;
+  padding: 25px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  /* border-left: 1px solid  	#A9A9A9; */
+  /* background-color: greenyellow; */
+}
+.con-youxi-r van-icon{
+  font-size: 35px;
+}
+.con-youxi-r-d{
+  width: 100%;
+  height: 80px;
+  border-left: 1px solid  #130303;
+   font-size: 10px;
+   background-color: pink;
+}
+
+/* 关于她 */
+/* .van-ta{
+ font-size: 20px; 
+  color: orange;
+
+} */
+
+/* b模块 */
+.con-van-b{
+  padding-top: 12px;
+  /* margin-top: 30px; */
+   width: 95%;
+   /* height: 550px; */
+    /* background-color: pink; */
+    /* border:  1px solid #ee4866; */
+    /* height: 650px; */
+    /* margin-top: 3%; */
+      margin-bottom: 50px;
+    /* padding-left: 2.5%;
+    padding-right: 2.5%; */
+}
+/* 头像 */
+.van-title-t{
+  width: 100%;
+  /* height: 60px; */
+  display: flex;
+  /* background-color: pink; */
+}
+.van-t-img{
+  width:15% ;
+  padding-left: 10px;
+  /* background-color: red; */
+}
+.van-c-text{
+  /* padding-top: 10px; */
+  width:72% ;
+  /* background-color: green; */
+}
+.van-c-text text{
+  font-size: 18px;
+}
+.van-b-tubiao{
+  width:10% ;
+  /* background-color: blue; */
+}
+.van-text-c{
+  width: 95%;
+  /* height: 80px; */
+  padding-left: 10px;
+  /* background-color: blue; */
+}
+/*文字 */
+.van-text-c-text{
+  margin-top: 10px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ font-size: 20px;
+
+}
+/* 图PIND */
+.van-text-c-img{
+ margin-top: 2px;
+ margin-bottom: 15px;
+ width: 90%;
+ /* background-color: rebeccapurple; */
+
+}
+
+.van-text-c-img  image{
+  width: 150px; 
+  /* border: 1px solid  red; */
+  height: 190px;
+  /* height: 90px; */
+ margin-right: 5px;
+}
+/* 评论 */
+.van-dianzan-b{
+border-top:  1px solid  	#C0C0C0;
+border-bottom:  4px solid  	#C0C0C0;
+width: 100%;
+height: 30px;
+/* background-color: blueviolet; */
+display: flex;
+text-align: center;
+padding-top: 5px;
+/* margin-bottom: 50px; */
+/* justify-content:space-between; */
+}
+.dianzan-l{
+ width: 45%;
+ /* background-color: chartreuse; */
+}
+.dianzan-c{
+  width: 45%; 
+}
+.dianzan-r{
+  width: 45%;
+  /* background-color: chartreuse; */
+}
+
+/* 按钮 */
+.con-butt{
+  width: 100%;
+
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  padding-bottom: 5px;
+  background-color:rgba(238,184,195,0.6);
+  /* background-color: salmon; */
+  /* opacity: 0.5; */
+  
+}
+.con-butt button{
+ width: 90%;
+ height: 50px;
+ padding-top: 10px;
+ /* opacity: 1.0; */
+ background-color:#ef475d;
+border-radius: 10px;
+ color:blanchedalmond;
+}
+/* 弹出框  关注成功 */
+.gz{
+  color: #ef475d;
+  font-size: 15px;
+ 
+}
+.preempt{
+width: 100%;
+background-color: blue;
+height: 60px;
+}
+
+/* 弹出层 */
+.tc-text{
+  /* background-color: blueviolet; */
+  text-align: center;
+  padding-top: 20px;
+  /* line-height: ; */
+  height: 40px;
+}
+.labele{
+  font-size: 15px;
+}
+.inputt{
+  font-size: 15px;
+}

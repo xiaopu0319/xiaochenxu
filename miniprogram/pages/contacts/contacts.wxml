@@ -1,0 +1,34 @@
+<van-nav-bar
+  title="好友列表"
+  placeholder
+  fixed
+  left-text="返回"
+	 bind:click-left="onClickLeft"
+/>
+<!--contacts.wxml-->
+
+<view class="contacts">
+	<view class="friend-list-box">
+		<view>
+			<view class="friend-list-item" wx:for="{{friends || []}}" wx:key="key" wx:for-item="friend" bindtap="enterPrivateChat" data-friend="{{friend}}">
+				<view class="friend-list-item-avatar">
+					<image src="{{friend.avatar}}" class="{{friend.online ? 'avatar-icon' : 'offline-gray  avatar-icon'}}" />
+					<image src="../../static/images/green-dot.png" class="online-dot"  wx:if="{{friend.online}}" />
+				</view>
+				<view class="friend-list-item-username">
+					<text>{{friend.name}}</text>
+				</view>
+			</view>
+		</view>
+		<view>
+			<view class="friend-list-item" wx:for="{{groups || []}}" wx:for-item="group" bindtap="enterGroupChat" data-group="{{group}}" wx:key="key">
+				<view class="friend-list-item-avatar">
+					<image class="avatar-icon" src="../../static/images/group.png" />
+				</view>
+				<view class="friend-list-item-username">
+					<text>{{group.name}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

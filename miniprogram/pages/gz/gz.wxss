@@ -1,0 +1,60 @@
+/* miniprogram/pages/gz/gz.wxss */
+.con{
+ width: 100%;
+ background-color:#132c33;
+ color: white;
+}
+.content{
+  padding-top: 2%;
+width: 100%;
+padding-bottom: 1%;
+/* height: 80px; */
+
+display: flex;
+}
+.content-l{
+  /* background-color: red; */
+  text-align: center;
+width: 20%;
+/* background-color: #ccccd6; */
+}
+.content-l  image{
+width: 3.5rem;
+height: 3.5rem;
+border-radius: 2.5rem;
+}
+.content-c{
+  width: 60%;
+  padding-top: 10px;
+  overflow:hidden;
+  /* background-color: greenyellow; */
+}
+#c-tiltle-f{
+font-size: 17px;
+}
+#c-text-f{
+  font-size: 13px;
+  /* background-color: purple; */
+
+
+
+}
+.content-r{
+ width: 20%;
+padding-top: 20px;
+ margin-left: 3%;
+/* background-color: pink; */
+/* padding-left: 5px; */
+ /* background-color: #ccccd6; */
+}
+.content-r view{
+  width: 95%;
+  text-align: center;
+  padding-top: 5px;
+  
+  padding-bottom: 5px;
+  /* height: 40px; */
+  color:#cfccc9;
+  font-size: 14px;
+   background-color: #ba2f7b;
+ }

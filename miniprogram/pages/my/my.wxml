@@ -1,0 +1,114 @@
+<van-nav-bar
+  title="随爱"
+  left-text="我的资料"
+  placeholder
+  fixed
+
+/>
+<view  class="bgcon"> 
+<view   class="con"   >
+<view   class="con-text"   bindtap="mytx" >
+<van-image
+  round
+  width="6rem"
+  height="6rem"
+  src="{{imgurl+mydata[0].userImg}}"
+/>
+</view>
+
+
+<view   class="con-text-l"  bindtap="dongtai">
+   <text>{{mydata[0].userName}}\n</text>
+
+   个性签名：{{mydata[0].userSign}}
+</view>
+<view   class="con-text-r">
+  <van-icon size="25" name="arrow" />
+</view>
+</view>
+
+
+
+<view  class="con-only">
+
+<van-cell-group>
+  <van-field
+    value="完善资料"
+    clearable
+    label="基本信息"
+   clearable
+   fixed
+   readonly
+    is-link
+     input-align="right"
+     bindtap="only"
+     label-class="labtext"
+  />
+
+
+
+  <van-field
+    value=""
+    left-icon="star-o"
+    label="关注"
+      readonly
+    is-link
+     input-align="right"
+     bindtap="gz"
+      label-class="labtext"
+  />
+
+
+   <van-field
+    value="已上传  0张"
+    clearable
+      readonly
+    label="我的相册"
+   clearable
+    is-link
+     label-class="labtext"
+     input-align="right"
+     bindtap="myimges"
+  />
+</van-cell-group>
+
+
+</view>
+
+
+
+<view  class="con-only">
+<van-cell-group>
+  <van-field
+    value=""
+     clearable
+    is-link
+      readonly
+     input-align="right"
+     label-class="labtext"
+     bindtap="zeou"
+    label="客服"
+  
+  />
+  
+</van-cell-group>
+</view>
+
+
+<view  class="con-button">
+<button  bindtap="quit" >退出登录</button>
+
+
+
+
+<van-tabbar active="{{ active }}" bind:change="onjump">
+  <van-tabbar-item wx:for="{{ list }}" wx:key="index" icon="{{ item.icon }}">
+  {{
+    item.text
+  }}</van-tabbar-item>
+</van-tabbar>
+</view>
+
+
+
+</view>

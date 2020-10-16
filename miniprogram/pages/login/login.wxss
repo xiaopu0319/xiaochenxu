@@ -1,0 +1,51 @@
+/* miniprogram/pages/login/login.wxss */
+.sa-img{
+  width: 100%;
+  height:200px;
+  background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3640309993,572841508&fm=26&gp=0.jpg);
+    text-align: center;
+    background-size:cover;
+   
+    
+}
+.sa-text{
+  color: white;
+  font-size: 25px;
+  line-height: 35px;
+    padding-top: 50px;
+}
+
+
+.container{
+  border: 3px solid  	#E6E6FA;
+  /* margin: 5px 6px; */
+  height:460px;
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597157635689&di=e47b9adf31bc2ebd5946f6d5515704de&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F52a02e668907f.jpg%3Fdown);
+  background-size:auto  670px;
+}
+.container text{
+  font-size: 20px;
+  padding: 30px 10px  10px 10px;
+  color: #E6E6FA;
+}  
+.sex{
+  display: flex;
+  margin-top: 40px;
+   justify-content:space-between;
+  /* align-items:center ; */ 
+  
+  /* background-color: white; */
+}
+.sex-le{
+  margin-right: 20px;
+
+}
+.sex-ri{
+ margin-left: 20px;
+
+}
+.qixi-butt{
+  margin-top: 50px;
+  width: 80%;
+  /* background-color: 	#FF00FF;   */
+}

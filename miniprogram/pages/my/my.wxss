@@ -1,0 +1,65 @@
+/* miniprogram/pages/my/my.wxss */
+.bgcon{
+
+  height:100%;
+  width: 100%;
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599644280113&di=ed3e69223b63923d52f9f4ce1fd8c5d4&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201801%2F22%2F20180122132657_5jhac.jpeg);
+}
+
+
+.con{
+
+width: 100%;
+height: 110px;
+
+/* background-color: violet; */
+flex-direction: row;
+display: flex;
+
+}
+.con-text{
+  width: 25%;
+  padding-top: 10px;
+  padding-left: 15px;
+  /* background-color: gold; */
+}
+.con-text-l{
+  width: 65%;
+/* background-color: green; */
+padding-top: 15px;
+padding-left: 10px;
+font-size: 15px;
+}
+.con-text-l  text{
+  font-size: 23px;
+
+}
+.con-text-r{
+ width: 10%;
+ /* background-color: blueviolet; */
+ padding-top: 45px;
+}
+.labtext{
+  font-size: 17px;
+}
+
+.con-only{
+border: 1px solid #de3f7c;
+ margin: 8px;
+
+}
+
+.con-button{
+ width:90%;
+ margin-left: 5%;
+ margin-top: 10%;
+   margin-bottom: 50%;
+   /* margin-bottom: 20%; */
+  height: 45px;
+  
+  background-color:#de3f7c;
+}
+.con-button button{
+  width: 95%;
+  color:  white;
+}

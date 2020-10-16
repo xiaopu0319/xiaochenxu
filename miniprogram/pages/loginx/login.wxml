@@ -1,0 +1,73 @@
+<!--login.wxml-->
+<van-nav-bar
+  title="随爱"
+
+  left-arrow
+    fixed
+  placeholder
+  bind:click-left="onClickLeft"
+
+/>
+
+  <view class="sa-img">
+  <view  class="sa-text">
+    <text>随心所爱</text>
+    <rich-text>为你匹配最合适的人</rich-text>
+  </view>
+  </view>
+
+  
+<view class="container">
+
+<view   class="con-top">
+  登录
+</view>
+
+<view   class="con-bu">
+<van-cell-group>
+  <van-field
+   name="username" 
+    required
+    clearable
+confirm-hold hold-keyboard="{{true}}" 
+adjust-position="{{true}}"
+    label="姓名"
+    bind:change="binduserName"
+    placeholder="请输入用户名"
+  />
+
+  <van-field
+     
+    required
+name= "password" 
+    clearable
+    label="密码"
+    type="password"
+      bind:change="bindpassword"
+    placeholder="身份证后6位"
+  />
+</van-cell-group>
+
+</view>
+
+<view class="con-but">
+		<button class="login-btn" form-type="submit" bindtap="login" >登录</button>
+</view>
+
+<view  class="register"   bindtap="tapregister" >  没有账号，点击这里！</view>
+<!-- con -->
+</view>
+
+<!-- <view class="container">
+	<view class="login">
+		<form bindsubmit="login">
+		 <view class="title">With The Love</view>
+			<input class="input-box" type="text" placeholder="请输入账号" name="username" confirm-hold hold-keyboard="{{true}}" adjust-position="{{true}}"/>
+			<input class="input-box" type="password" placeholder="请输入密码" name= "password" />
+			<view wx:if="{{showError}}" class="error">请输入正确的用户名和密码</view>
+			<button class="login-btn" form-type="submit">登录</button>
+		</form>
+
+    <view  class="register"   bindtap="tapregister" >  没有账号，点击这里！</view>
+	</view>
+</view> -->

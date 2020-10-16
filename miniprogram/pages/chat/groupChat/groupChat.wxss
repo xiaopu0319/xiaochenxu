@@ -1,0 +1,307 @@
+/* groupChat.wxss */
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 120rpx;
+	background-color: #D02129;
+}
+
+.exit-icon {
+	padding-left: 20rpx;
+	line-height: 120rpx;
+	font-size: 36rpx;
+	color: #FFFFFF;
+}
+
+.header-friend-name {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: #FFFFFF;
+}
+
+.group-member-icon {
+	right: 20rpx;
+		width: 60rpx;
+		height: 60rpx;
+		top:14rpx;
+		position: fixed;
+		right: 20rpx;
+		top:60rpx;
+		background-color: #C4C4C4;
+		z-index: 2;
+		border-radius: 60rpx;
+}
+
+.scroll-view {
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 130rpx;
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90rpx;
+	font-size: 24rpx;
+}
+
+.gray {
+	color: gray !important;
+	text-decoration: none !important;
+}
+
+.self-msg {
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 40rpx 0;
+	overflow: hidden;
+}
+
+.other-msg {
+	display: flex;
+	margin: 40rpx 0;
+	overflow: hidden;
+}
+
+.message-item {
+	padding: 0 20rpx;
+}
+
+.avatar {
+	width: 96rpx;
+	height: 96rpx;
+	min-width: 96rpx;
+	min-height: 96rpx;
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	border-radius: 10rpx;
+	line-height: 44rpx;
+	font-size: 34rpx;
+	color: #FFFFFF;
+}
+
+.content-word {
+	padding: 16rpx;
+	border-radius: 10rpx;
+	word-break: break-word;
+	word-break: break-all;
+	background-color: #D02129;
+}
+
+.content-image {
+	width: 250rpx;
+	height: 300rpx;
+	background-color: #ffffff;
+}
+
+.action-box {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	height: 130rpx;
+	padding: 20rpx 10rpx 20rpx 10rpx;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #FAFAFA;
+}
+
+.msg-box {
+	flex: 1;
+	height: 80rpx;
+	padding-left: 20rpx;
+	border-radius: 12rpx;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	background-color: #efefef;
+}
+
+.send-btn-box {
+	width: 80rpx;
+	padding-left: 10rpx;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	color: #95949A;
+}
+
+.self-content {
+	margin-right: 20rpx;
+}
+
+.other-content {
+	margin-left: 20rpx;
+}
+
+/* group member */
+
+.member-layer {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	height: 100%;
+	background: #FFFFFF;
+}
+
+.exit-icon {
+	padding-left: 20rpx;
+	line-height: 120rpx;
+	font-size: 36rpx;
+	color: #FFFFFF;
+}
+
+.header-group-name {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: #FFFFFF;
+}
+
+.member {
+	padding: 10rpx;
+	margin-top: 10rpx;
+}
+
+.group-member-avatar {
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+}
+
+/* 上传文件 */
+.record-msg-box {
+	flex: 1;
+	height: 80rpx;
+	padding-left: 20rpx;
+	border-radius: 12rpx;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	text-align: center;
+	color: #FFFFFF;
+	background: #cccccc;
+	padding: 0;
+}
+
+.files-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70rpx;
+	height: 100%;
+}
+
+.file-icon {
+	width: 60rpx;
+	height: 60rpx;
+}
+
+.keyboard-icon {
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.microphone-icon {
+	width: 45rpx;
+	height: 50rpx;
+}
+
+.pending {
+	width: 30rpx;
+	height: 30rpx;
+	padding: 10rpx;
+}
+
+.file-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 480rpx;
+	height: 140rpx;
+	border-radius: 20rpx;
+	background: #EFEFEF;
+}
+
+.file-content image {
+	width: 80rpx;
+	height: 80rpx;
+	padding: 0;
+}
+
+.file-info {
+	display: flex;
+	flex-direction: column;
+	height: 10rpx;
+	width: 300rpx;
+	padding: 0 20rpx;
+}
+
+.title {
+	height: 60rpx;
+	line-height: 60rpx;
+	overflow: hidden;
+	font-size: 32rpx;
+	padding: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	word-break: break-all;
+	color: #262628;
+}
+
+.size {
+	font-size: 28rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	padding: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	overflow: hidden;
+	word-break: break-all;
+	color: #999999;
+}
+
+.video-snapshot {
+	position: relative;
+	max-height: 240rpx;
+	max-width: 300rpx;
+	overflow: hidden;
+}
+
+.thumbnail-image{
+	max-height: 240rpx;
+	max-width: 300rpx;
+}
+
+.thumbnail-icons {
+	position: relative;
+}
+.play-icon {
+	position: absolute;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 20rpx;
+	top: 50%;
+	left: 50%;
+	margin-left: -40rpx;
+	margin-top: -40rpx;
+	z-index: 1000;
+	opacity: 1;
+}

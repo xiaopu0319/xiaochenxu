@@ -1,0 +1,31 @@
+<van-nav-bar
+  title="发布动态"
+  left-text="返回"
+  left-arrow
+    fixed
+  bind:click-left="onClickLeft"
+/>
+<view  class="top-text">
+<textarea
+width="90%"
+maxlength="90"
+placeholder="分享新鲜事..."
+auto-focus="true"
+bindinput="dongtaivlaue"
+>
+</textarea>
+
+<!-- 
+<view class="imageRootAll"> -->
+<van-uploader
+  file-list="{{ fileList }}"
+  accept="{{accept}}"
+  multiple="true"
+  compressed="false"
+  bind:delete="Delete"
+  bind:after-read="afterRead"
+/>
+<!-- </view> -->
+<!-- top-text结尾 -->
+</view>
+<button type="primary" bindtap="publish">确认上传</button>

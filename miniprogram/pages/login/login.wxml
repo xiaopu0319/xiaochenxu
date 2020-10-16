@@ -1,0 +1,56 @@
+<!--miniprogram/pages/login/login.wxml-->
+<van-nav-bar
+  title="随爱"
+
+  left-arrow
+    fixed
+  placeholder
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+
+  <view class="sa-img">
+  <view  class="sa-text">
+    <text>完善资料</text>
+    <rich-text>为你匹配最合适的人</rich-text>
+  </view>
+  </view>
+
+  <!-- <van-image width="100%" 
+height="200" 
+
+src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2879587941,3096524536&fm=26&gp=0.jpg" 
+/> -->
+  <view  class="container">  
+
+  <text>请问你是一位帅哥，还是一位美女？</text>
+  
+  <view   class="sex">
+
+  <view  class="sex-le">
+ <van-image 
+
+ width="120" 
+height="120" 
+ fit="scale-down"
+src="https://img2.woyaogexing.com/2020/08/11/a3dee7dfae5d4fad9db8fc1eb72c44e4!400x400.jpeg"
+     bindtap="onAdd"
+   />
+</view>
+
+<view   class="sex-ri">
+
+ <van-image 
+ width="120" 
+height="120" 
+ fit="scale-down"
+ bindtap="onGdd"
+src="https://img2.woyaogexing.com/2020/08/11/9fcd2a43d1b44a9a9789044af9597f8a!400x400.jpeg"
+   />
+   </view>
+
+
+  </view>
+  
+   <button  class="qixi-butt">下一步</button>
+  </view>

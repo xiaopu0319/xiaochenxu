@@ -1,0 +1,105 @@
+<!--miniprogram/pages/mateSelection/mateSelection.wxml-->
+<van-nav-bar
+  title="条件"
+  left-text="返回"
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+    fixed
+  placeholder
+/>
+<!-- 
+<van-cell-group  class="con">
+  <van-field
+
+  label="{{user}}"
+    value="{{ name }}"
+    input-align="right"
+     is-link
+     bind:change="updataUser"
+  />
+</van-cell-group> -->
+
+
+<!-- 弹出层 -->
+<van-dialog
+  use-slot
+  title="温馨提示"
+  show="{{ showuser }}"
+  show-cancel-button
+
+  bind:close="onCloseuser"
+
+>
+
+  <view  class="updatkf">
+  <text>修改请致电800820-8820-520,\n请联系客服</text>
+    
+  </view>
+
+</van-dialog>
+
+
+
+
+
+<van-cell-group   wx:for="{{tt}}"   wx:for-index="bindindex"   class="con">
+
+  <van-field 
+  
+     id="{{bindindex}}" 
+    value="{{ item.par }} "
+    clearable
+    is-link
+    label="{{item.class}}"
+     readonly
+      input-align="right"
+     bindtap="updata"
+  />
+
+
+  <!-- <van-field
+    value="{{ height }}"
+    clearable
+    is-link
+    label="身高"
+     readonly
+      input-align="right"
+     bindtap="updataHeight"
+  />
+   <van-field
+    value="{{ city }}"
+    clearable
+    is-link
+    label="工作地区"
+     readonly
+      input-align="right"
+     bindtap="updataCity"
+  /> -->
+</van-cell-group>
+
+  <view   class="con-button">
+  <button  bindtap="save">保存</button>
+  </view>
+
+
+<!-- 选项 -->
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  bind:close="onClose"
+  custom-style="height: 50%;"
+>
+  <van-picker columns="{{ stat }}"  
+  default-index="{{ 1 }}"
+ bind:close="onClose"
+
+
+ bind:change = "onSlider"
+  bind:confirm="onChange"
+  show-toolbar="true"
+  confirm-button-text="确认"
+  cancel-button-text="取消" 
+  title="测试"
+  />
+</van-popup>

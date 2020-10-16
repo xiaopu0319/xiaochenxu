@@ -1,0 +1,42 @@
+
+<van-nav-bar
+  title="我的爱情"
+  placeholder
+  fixed
+  left-text="好友列表"
+	 bind:click-left="contacts"
+/>
+
+
+
+<view class="conversations-container">
+<scroll-view class="conversations" scroll-y="true" enable-flex="true">
+		<view wx:if="{{conversations && conversations.conversations && conversations.conversations.length !=0}}">
+			<view class="scroll-item" wx:for="{{conversations.conversations}}" wx:key="key">
+				<image src="{{friends[item.userId] && friends[item.userId].avatar}}" wx:if="{{item.type == 'private'}}" class="head-icon"></image>
+				<image src="../../static/images/group.png" wx:else  class="head-icon"></image>
+				<view class="scroll-item_info">
+					<view class="item-info-top">
+						<text class="item-info-top_name"  wx:if="{{item.type == 'private'}}">{{friends[item.userId] && friends[item.userId].name}}</text>
+						<text class="item-info-top_name" wx:else>{{groups[item.groupId] && groups[item.groupId].name}}</text>
+						<view class="item-info-top_time">{{ item.formatDate}}</view>
+					</view>
+					<view class="item-info-bottom">
+						<view class="item-info-bottom-item" bindtap="navigateToChat"  data-conversation="{{item}}" >
+							<view class="item-info-top_content" wx:if="{{item.lastMessage.type == 'text'}}">{{item.lastMessage.payload.text}}</view>
+							<view class="item-info-top_content" wx:elif="{{item.lastMessage.type == 'video'}}">[视频消息]</view>
+							<view class="item-info-top_content" wx:elif="{{item.lastMessage.type == 'audio'}}">[语音消息]</view>
+							<view class="item-info-top_content" wx:elif="{{item.lastMessage.type == 'image'}}">[图片消息]</view>
+							<view class="item-info-top_content" wx:elif="{{item.lastMessage.type == 'file'}}">[文件消息]</view>
+							<view class="item-info-top_content" wx:else>[[未识别内容]]</view>
+							<view class="item-info-bottom_unread" wx:if="{{item.unread}}">{{item.unread}}</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="no-conversation" wx:else>
+			当前没有会话为空
+		</view>
+	</scroll-view>
+</view>

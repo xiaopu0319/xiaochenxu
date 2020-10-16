@@ -1,0 +1,53 @@
+<!--miniprogram/pages/loginDQ/loginDQ.wxml-->
+<van-nav-bar
+  title="随爱"
+ 
+  left-arrow
+   bind:click-left="onClickLeft"
+/>
+
+  <view class="sa-img">
+  <view  class="sa-text">
+    <text>完善资料</text>
+    <rich-text>为你匹配最合适的人</rich-text>
+  </view>
+  </view>
+
+
+
+   
+<view class="container">
+
+<view   class="con-top">
+   完善身份信息
+</view>
+
+<view   class="con-bu">
+<van-cell-group>
+  <van-field
+    value="{{name}}"
+    required
+    clearable
+bind:change="bindName"
+    label="姓名"
+    placeholder="请输入用户名"
+  />
+
+  <van-field
+     value="{{idCard}}"
+    required
+    bind:change="bindidCard"
+    clearable
+    label="身份证"
+    placeholder="请输入身份证号"
+  />
+</van-cell-group>
+
+</view>
+
+<view class="con-but" >
+<button   wx:if="{{name!='' &&  idCard!=''}}"  bindtap="approve"  >提交</button>
+</view>
+<!-- con -->
+</view>
+

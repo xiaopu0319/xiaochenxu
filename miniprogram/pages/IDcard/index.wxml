@@ -1,0 +1,27 @@
+<view >
+  <view class="box">
+      <view class="title">
+          完善身份信息
+      </view>
+      <view class="warn">*完善身份信息，体验更多服务</view>
+      <view class='info'> 
+          <view class="colum">      
+              <text decode="{{true}}" class="list">姓&emsp;&emsp;名：</text>
+             <input bindinput="bindName"  value='{{name}}'></input>      
+          </view>
+          
+      </view>
+      <view class='info' style='margin-top:100rpx;'> 
+          <view class="colum">
+              <view class='list'>身份证号：</view>
+               <input bindinput="bindidCard"  value="{{ idCard }}"></input>    
+             
+          </view>
+        
+      </view>
+  </view>
+  <view class='button'>
+   
+      <button bindtap="approve" class='button_item'> 允许</button>
+  </view>
+</view>

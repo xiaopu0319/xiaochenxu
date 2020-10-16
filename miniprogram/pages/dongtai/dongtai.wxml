@@ -1,0 +1,46 @@
+<!--pages/dongtai/dongtai.wxml-->
+<van-nav-bar
+  title="发布动态"
+  left-text="返回"
+  left-arrow
+    fixed
+  bind:click-left="onClickLeft"
+/>
+
+<view  class="top-text">
+<textarea
+width="90%"
+maxlength="90"
+placeholder="分享新鲜事..."
+auto-focus="true"
+bindinput="dongtaivlaue"
+>
+</textarea>
+ 
+
+<view class="con">
+ <!-- <view  class="con-img"   wx:for="{{dtIMG}}"  wx:key='*this' > 
+  <image src="{{item}}"></image>
+ </view> -->
+<van-uploader file-list="{{ dtIMG }}" 
+deletable="{{ true }}"
+max-count="4"
+bind:after-read="dqUploader"
+
+/>
+
+  <!-- <view  class="con-img"  bindtap="dtUploader"> 
+  <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2308393051,3447430164&fm=26&gp=0.jpg"></image>
+ </view> -->
+</view>
+
+
+
+<!-- top-text结尾 -->
+</view>
+
+
+
+<view bindtap="DTFB"   class="fb-button">
+   发布
+</view>

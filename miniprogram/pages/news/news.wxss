@@ -1,0 +1,28 @@
+/* miniprogram/pages/news/news.wxss */
+.con{
+   width: 100%;
+  /* height: 200px; */
+  /* background-color: orchid; */
+  display: flex;
+
+  padding: 10px  15px 10px  15px;
+}
+.con img{
+ width: 35%;
+  /* border-radius: 5rem; */
+}
+.con-text{
+  margin-left: 5%;
+  width: 70%;
+  flex-direction: column;
+  border-bottom: 1px solid  black;
+}
+.con-text-t{
+  font-size: 25px;
+}
+.con-text-b{
+
+  padding-top: 10px;
+font-size:  15px;
+
+}

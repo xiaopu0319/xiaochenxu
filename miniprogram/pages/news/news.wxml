@@ -1,0 +1,48 @@
+
+<van-nav-bar
+  title="我的消息"
+  left-text="随爱"
+    fixed
+  placeholder
+/>
+ <view  class="con">
+ 
+  <view  class="con-img">
+  <van-image
+   width="70"
+    height="70" 
+  radius="7"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </view>
+ 
+    
+ 
+   <view   class="con-text"> 
+      <view  class="con-text-t">张三</view>
+       <view   class="con-text-b" >O(∩_∩)O哈哈~</view>
+   </view>
+ 
+ </view>
+
+
+  <view  class="con">
+ 
+  <view  class="con-img">
+  <van-image
+   width="70"
+    height="70" 
+  radius="7"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  </view>
+ 
+    
+ 
+   <view   class="con-text"> 
+      <view  class="con-text-t">张三</view>
+       <view   class="con-text-b" >O(∩_∩)O哈哈~</view>
+   </view>
+ 
+ </view>
+
+
+

@@ -1,0 +1,19 @@
+/* miniprogram/pages/play/play.wxss */
+.container{
+  padding-top: 40rpx;
+  background-image: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1294887595,1623358241&fm=15&gp=0.jpg);
+  height: 1300rpx;
+  
+}
+.container  button{
+        margin-top: 500px;
+       width: 80%;
+       height: 50px;
+       font-size: 18px;
+       color: white;
+      background-color:#f1ca17;
+}
+.container   text{
+    margin-top: 10px;
+   color: #f1ca17;
+}

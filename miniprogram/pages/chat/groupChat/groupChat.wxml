@@ -1,0 +1,59 @@
+<page-meta>
+	<navigation-bar background-color="#D02129" title="{{group.name}}"/>
+</page-meta>
+<view class="groupchat">
+	<image class="group-member-icon" src="/static/images/group-icon.png" bindtap="showMembers"></image>
+	<view scroll-y class="scroll-view">
+		<view class="top gray">
+			<text>{{allHistoryLoaded ? '已经没有更多的历史消息' : '下拉获取历史消息'}}</text>
+		</view>
+		<view id="item{{index}}" wx:for="{{messages || []}}" wx:key="index" wx:for-item="message" class="{{message.senderId == currentUser.uuid ? 'self-msg message-item' : 'other-msg message-item'}}">
+			<view class="avatar">
+				<image class='avatar' src="{{currentUser.avatar}}" wx:if="{{message.senderId == currentUser.uuid}}" />
+				<image class='avatar' src="{{groupMembersMap[message.senderId].avatar}}" wx:else />
+			</view>
+			<view class="content {{currentUser.uuid==message.senderId?'self-content':'other-content'}}">
+				<text class="content-word" wx:if="{{message.type =='text'}}">{{message.payload.text}}</text>
+				<image class="content-image" wx:if="{{message.type == 'image'}}" src="{{message.payload.url}}" bindtap="previewImage"
+				 data-src="{{message.payload.url}}"  mode="aspectFit"/>
+				<GoEasyAudioPlayer id="goEasyAudio" wx:if="{{message.type =='audio'}}" src="{{message.payload.url}}" duration="{{message.payload.duration}}" />
+               <view class="video-snapshot" bindtap="playVideo" data-url="{{message.payload.video.url}}" data-duration="{{message.payload.video.duration}}"  wx:if="{{message.type == 'video'}}">
+               		<image class="thumbnail-image" src="{{message.payload.thumbnail.url}}" mode="aspectFit"></image>
+               		<image class="play-icon" src="/static/images/videoImage/play.png" mode="aspectFit"></image>
+               </view>
+			</view>
+		</view>
+		<!-- 发送消息的状态 -->
+		<view id="item{{index+messages.length}}" wx:for="{{pendingMessages || []}}" wx:key="key" wx:for-item="message" class="{{message.senderId == currentUser.uuid ? 'self-msg message-item' : 'other-msg message-item'}}">
+			<view class="avatar">
+				<image class='avatar' src="{{currentUser.avatar}}" wx:if="{{message.senderId == currentUser.uuid}}" />
+				<image class='avatar' src="{{groupMembersMap[message.senderId].avatar}}" wx:else />
+			</view>
+			<view class="content {{currentUser.uuid==message.senderId?'self-content':'other-content'}}">
+				<image class="pending" src="/static/images/pending.gif"  mode="aspectFit"/>
+				<text wx:if="{{message.type == 'text'}}" class="content-word">{{message.payload.text}}</text>
+				<image class="content-image" wx:if="{{message.type == 'image'}}" src="{{message.payload.url}}" mode="aspectFit"/>
+				<GoEasyAudioPlayer id="goEasyAudio" wx:if="{{message.type =='audio'}}" src="{{message.payload.url}}" duration="{{message.payload.duration}}" />
+                <view class="video-snapshot" wx:if="{{message.type == 'video'}}">
+                    <image class="thumbnail-image" src="{{message.payload.thumbnail.url}}" mode="aspectFit"></image>
+                    <image class="play-icon" src="/static/images/videoImage/play.png" mode="aspectFit"></image>
+                </view>
+			</view>
+		</view>
+	</view>
+	<view class="action-box">
+		<view bindtap="switchAudioKeyboard" class="files-icon">
+			<image wx:if="{{recordVisible}}" class="microphone-icon" src="/static/images/record-appearance-icon.png"></image>
+			<image wx:else class="keyboard-icon" src="/static/images/jianpan.png"></image>
+		</view>
+		<!-- 录音 -->
+		<GoEasyRecorder wx:if="{{recordVisible}}" bind:onStop="onRecordStop"></GoEasyRecorder>
+		<input wx:else type="text" placeholder="发送消息" confirm-hold hold-keyboard="{{true}}" adjust-position="{{true}}" class="msg-box"
+		 data-content="content" bindinput="setContent" value="{{content}}" />
+		<view class="files-icon" bindtap="sendImageAndVideo">
+			<image src="/static/images/file.png" class="file-icon"></image>
+		</view>
+		<view class="send-btn-box" bindtap="sendTextMessage">发送</view>
+	</view>
+	<GoEasyVideoPlayer id="videoPlayer"> </GoEasyVideoPlayer>
+</view>

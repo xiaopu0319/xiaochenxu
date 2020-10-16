@@ -1,0 +1,46 @@
+/* pages/dongtai/dongtai.wxss */
+.top-text{
+ width: 90%;
+ margin-left: 2%;
+ padding-left: 5%;
+ padding-top: 2%;
+ font-size: 17px;
+ margin-top: 80px;
+  height: 250px;
+  /* background-color: violet;
+   */
+   background-image: url("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3430999452,4090913508&fm=26&gp=0.jpg");
+}
+
+.top-text  textarea{
+  /* background-color: #ee3f4d; */
+  color: #132c33;
+  width: 95%;
+}
+.con{
+display: flex;
+margin-top: 10px;
+}
+.con-img{
+ 
+ width: 20%;
+ height: 80px;
+   margin-right: 8px;
+ background-color: #e3b4b8;
+}
+.con-img image{
+  border-radius: 5px;
+ width: 100%;
+ height: 80px;
+}
+
+.fb-button{
+  background-color: #eb3c70;
+  width: 80%;
+  margin-top: 20px;
+  height:30px;
+  padding-top: 10px;
+  margin-left: 10%;
+  color: #f8df72;
+  text-align: center;
+}
